@@ -10,10 +10,10 @@ else
     echo "Unknown shell"
 fi
 
-PRJ_DIR=$(dirname $(realpath $script_path))
+lua_inline_c_dir=$(dirname $(realpath $script_path))
 
 export LUA_PATH="\
 $LUA_PATH\
-$PRJ_DIR/?/?.lua;\
-$PRJ_DIR/?.lua;\
+$lua_inline_c_dir/?/?.lua;\
+$lua_inline_c_dir/?.lua;\
 "
